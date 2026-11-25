@@ -1,4 +1,4 @@
-# 아르카나 듀얼, Arcana Duel / Server
+# Arcana Duel Server
 
 <!-- portfolio-languages -->
 [![English](https://ysl-ryudo.github.io/assets/diagrams/language-en.svg)](README.md) [![한국어 (현재 언어)](https://ysl-ryudo.github.io/assets/diagrams/language-ko-current.svg)](README.ko.md) [![日本語](https://ysl-ryudo.github.io/assets/diagrams/language-ja.svg)](README.ja.md)
@@ -39,43 +39,43 @@ Unity에서 덱 편성, 캐릭터 조작, 마법 시전, 전투 UI와 경기 결
 
 로그인과 로비의 서비스 및 UI 연결, 로딩과 매칭 취소, 게임 진입을 구현했습니다. 전투 패킷 교환뿐 아니라 경기에 들어가고 나오는 흐름까지 네트워크 응답과 화면 상태를 연결했습니다.
 
-[LoginService.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Login/LoginService.cs), [내 변경 c507717](https://github.com/YSL-RyuDo/magicwar/commit/c5077172f80d9908725b1f1668f4598bb3cdd62b), [LobbyService.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Lobby/LobbyService.cs), [내 변경 c507717](https://github.com/YSL-RyuDo/magicwar/commit/c5077172f80d9908725b1f1668f4598bb3cdd62b), [LoadingSystem.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Loading/LoadingSystem.cs), [내 변경 c507717](https://github.com/YSL-RyuDo/magicwar/commit/c5077172f80d9908725b1f1668f4598bb3cdd62b)
+[LoginService.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Login/LoginService.cs), [내 변경 c507717](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/c5077172f80d9908725b1f1668f4598bb3cdd62b), [LobbyService.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Lobby/LobbyService.cs), [내 변경 c507717](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/c5077172f80d9908725b1f1668f4598bb3cdd62b), [LoadingSystem.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Loading/LoadingSystem.cs), [내 변경 c507717](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/c5077172f80d9908725b1f1668f4598bb3cdd62b)
 
 ### 마법 덱 4슬롯 편성
 
 카드 선택과 상세 표시, 장착 슬롯 교체를 구현했습니다. SettingSystem은 교체하려는 카드와 현재 덱을 구분하고 변경 성공 뒤 덱을 다시 요청합니다. 로컬 카드 에셋의 표시 정보와 런타임 카드의 게임 수치도 구분했습니다.
 
-[SettingSystem.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/SettingSystem.cs), [내 변경 d14efd6](https://github.com/YSL-RyuDo/magicwar/commit/d14efd652cede62088b9bbebdc6de8534b072340), [CardStatManager.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/CardStatManager.cs), [내 변경 500313d](https://github.com/YSL-RyuDo/magicwar/commit/500313d0294b2d3aca4166f540c7a3bfab1b6c53)
+[SettingSystem.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/SettingSystem.cs), [내 변경 d14efd6](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/d14efd652cede62088b9bbebdc6de8534b072340), [CardStatManager.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/CardStatManager.cs), [내 변경 500313d](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/500313d0294b2d3aca4166f540c7a3bfab1b6c53)
 
 ### 마법 시전과 개별 효과
 
 입력과 쿨다운, 투사체 생성과 장판형 마법 분기를 구현했습니다. 화염과 얼음, 전격 투사체, 독과 얼음 영역, 운석 충돌, 회복과 보호막, 은신과 순간이동을 다룹니다. MagicCaster에서 선택 카드와 런타임 수치, 애니메이션과 생성된 마법의 동작을 연결했습니다.
 
-[MagicCaster.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Magic/MagicCaster.cs), [내 변경 a64178a](https://github.com/YSL-RyuDo/magicwar/commit/a64178ace62939442e4a7cb727b7bc2f04663230), [GameManager.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Game/GameManager.cs), [내 변경 2f2abc5](https://github.com/YSL-RyuDo/magicwar/commit/2f2abc5397d4bc8981d862c7a6e8f117cb11138a)
+[MagicCaster.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Magic/MagicCaster.cs), [내 변경 a64178a](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/a64178ace62939442e4a7cb727b7bc2f04663230), [GameManager.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Game/GameManager.cs), [내 변경 2f2abc5](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/2f2abc5397d4bc8981d862c7a6e8f117cb11138a)
 
 ### 이동, 상태 효과와 상대 캐릭터
 
 둔화와 기절, 시전 제약을 반영하는 로컬 이동과 애니메이션, 상대 캐릭터의 이동과 공격, 피격과 사망 표시를 구현했습니다. 로컬 입력 처리와 원격 캐릭터 표시를 별도 경로로 다룹니다.
 
-[CharacterController2D.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Player/CharacterController2D.cs), [내 변경 a6f8138](https://github.com/YSL-RyuDo/magicwar/commit/a6f81385bb004f7ddae57ac3ea8c29bddd604b9b), [EnemyService.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Enemy/EnemyService.cs), [내 변경 2f2abc5](https://github.com/YSL-RyuDo/magicwar/commit/2f2abc5397d4bc8981d862c7a6e8f117cb11138a)
+[CharacterController2D.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Player/CharacterController2D.cs), [내 변경 a6f8138](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/a6f81385bb004f7ddae57ac3ea8c29bddd604b9b), [EnemyService.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Enemy/EnemyService.cs), [내 변경 2f2abc5](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/2f2abc5397d4bc8981d862c7a6e8f117cb11138a)
 
 ### 전투 HUD와 경기 종료
 
 체력과 마법 쿨다운 UI, 승패 표시와 로비 복귀를 구현했습니다. 전투와 결과 상태를 화면에 반영하고 서버의 경기, 프로필과 랭크 처리까지 연결했습니다.
 
-[GameUIController.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Game/GameUIController.cs), [내 변경 2f2abc5](https://github.com/YSL-RyuDo/magicwar/commit/2f2abc5397d4bc8981d862c7a6e8f117cb11138a), [MatchManager.cpp (main)](https://github.com/YSL-RyuDo/magicwarserver-public/blob/e45825a76f6160e1e362546cb2fa09b44e4fdfd3/projectMagicWar/MatchManager.cpp), [내 변경 5007ff1](https://github.com/YSL-RyuDo/magicwarserver-public/commit/010868f1cce4bae4a9955d03415f1c2f2d77fca5)
+[GameUIController.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Game/GameUIController.cs), [내 변경 2f2abc5](https://github.com/YSL-RyuDo/ArcanaDuelClient/commit/2f2abc5397d4bc8981d862c7a6e8f117cb11138a), [MatchManager.cpp (main)](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/e45825a76f6160e1e362546cb2fa09b44e4fdfd3/projectMagicWar/MatchManager.cpp), [내 변경 5007ff1](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/commit/010868f1cce4bae4a9955d03415f1c2f2d77fca5)
 
 ### 통신 처리와 저장
 
 IOCP 서버의 메시지 경계 복원, 세션 자원과 별도 DB 작업자를 구현했습니다. 아래 설명에서는 TCP 메시지를 복원하는 일과 저장을 기다리는 일을 결과를 사용하는 게임 코드와 왜 분리하는지 다룹니다.
 
-[PacketParser.cpp (main)](https://github.com/YSL-RyuDo/magicwarserver-public/blob/e45825a76f6160e1e362546cb2fa09b44e4fdfd3/projectMagicWar/PacketParser.cpp), [내 변경 5007ff1](https://github.com/YSL-RyuDo/magicwarserver-public/commit/010868f1cce4bae4a9955d03415f1c2f2d77fca5), [DBWorker.cpp (main)](https://github.com/YSL-RyuDo/magicwarserver-public/blob/e45825a76f6160e1e362546cb2fa09b44e4fdfd3/projectMagicWar/DBWorker.cpp), [내 변경 5007ff1](https://github.com/YSL-RyuDo/magicwarserver-public/commit/010868f1cce4bae4a9955d03415f1c2f2d77fca5)
+[PacketParser.cpp (main)](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/e45825a76f6160e1e362546cb2fa09b44e4fdfd3/projectMagicWar/PacketParser.cpp), [내 변경 5007ff1](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/commit/010868f1cce4bae4a9955d03415f1c2f2d77fca5), [DBWorker.cpp (main)](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/e45825a76f6160e1e362546cb2fa09b44e4fdfd3/projectMagicWar/DBWorker.cpp), [내 변경 5007ff1](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/commit/010868f1cce4bae4a9955d03415f1c2f2d77fca5)
 
 ## 기여 근거
 
-[IOCP implementation](https://github.com/YSL-RyuDo/magicwarserver-public/blob/6b36439fa77a183c365fe4b7ab34a88d0adfdf47/projectMagicWar/IOCP_GameServer.cpp)
+[IOCP implementation](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/6b36439fa77a183c365fe4b7ab34a88d0adfdf47/projectMagicWar/IOCP_GameServer.cpp)
 
-[Development history / 개발 이력 / 開発履歴](https://github.com/YSL-RyuDo/magicwarserver-public/commits/main/?author=YSL-RyuDo)
+[Development history / 개발 이력 / 開発履歴](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/commits/main/?author=YSL-RyuDo)
 
 ## 구현과 설계
 
@@ -107,7 +107,7 @@ DB를 즉시 호출하면 큐가 필요 없지만 저장 대기가 네트워크 
 
 DB 작업자 하나로 실행 순서를 단순하게 만들지만 요청이 쌓이면 병목이 됩니다. 큐 용량과 취소, 종료 시 남은 작업을 처리하는 정책을 별도로 정해야 합니다.
 
-[magicwarserver/DBWorker.cpp](https://github.com/YSL-RyuDo/magicwarserver-public/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/DBWorker.cpp), [magicwarserver/MatchManager.cpp](https://github.com/YSL-RyuDo/magicwarserver-public/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/MatchManager.cpp)
+[magicwarserver/DBWorker.cpp](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/DBWorker.cpp), [magicwarserver/MatchManager.cpp](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/MatchManager.cpp)
 
 ### 수신 한 번을 패킷 하나로 취급하지 않는 이유
 
@@ -127,7 +127,7 @@ TCP는 순서 있는 바이트 스트림이므로 송신 한 번과 수신 한 �
 
 메시지 경계를 복원하려면 길이와 용량 검사, 객체 수명 관리가 필요합니다. 헤더와 본문이 나뉘어 오는 경우, 한 수신에 여러 메시지가 들어오는 경우와 I/O 대기 중 연결 종료를 처리해야 합니다.
 
-[magicwarserver/PacketParser.cpp](https://github.com/YSL-RyuDo/magicwarserver-public/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/PacketParser.cpp), [magicwarserver/IOCP_Recv.cpp](https://github.com/YSL-RyuDo/magicwarserver-public/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/IOCP_Recv.cpp)
+[magicwarserver/PacketParser.cpp](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/PacketParser.cpp), [magicwarserver/IOCP_Recv.cpp](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic/blob/c38570bda4b1eb81ad7b47a872ff369b6121073d/projectMagicWar/IOCP_Recv.cpp)
 
 ### 마법의 표시 정보와 전투 수치를 나눈 이유
 
@@ -147,7 +147,7 @@ MagicCaster는 시전 전에 로컬 CardData의 프리팹과 서버에서 받은
 
 카드 ID와 프리팹, 런타임 레코드가 서로 맞아야 합니다. 마법을 추가할 때 운석 ID 예외와 프리팹의 필수 컴포넌트를 함께 확인해야 합니다.
 
-[magicwar/MagicCaster.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Magic/MagicCaster.cs), [magicwar/CardStatManager.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/CardStatManager.cs)
+[magicwar/MagicCaster.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Magic/MagicCaster.cs), [magicwar/CardStatManager.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/CardStatManager.cs)
 
 ### 덱 교체 요청과 확정된 덱을 구분한 이유
 
@@ -167,16 +167,16 @@ SettingSystem은 슬롯을 고르는 동안 교체할 카드 ID를 임시로 보
 
 현재 코드는 표시된 스프라이트에서 이전 카드를 찾고 교체 실패를 로그로 남깁니다. 명시적인 슬롯 ID와 처리 중 상태, 시간 초과 처리를 추가하면 화면 표시와 요청 처리를 더 명확하게 분리할 수 있습니다.
 
-[magicwar/SettingSystem.cs (main)](https://github.com/YSL-RyuDo/magicwar/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/SettingSystem.cs)
+[magicwar/SettingSystem.cs (main)](https://github.com/YSL-RyuDo/ArcanaDuelClient/blob/20cff216e385494429a4629127ef85f8732a82db/Assets/Script/Setting/SettingSystem.cs)
 
 ## 실행, 코드 확인
 
 Windows C++ 워크로드가 설치된 Visual Studio에서 [projectMagicWar.sln](projectMagicWar.sln)을 여세요. 구성, 데이터 경로, 의존성, 접속 설정을 확인한 뒤 대응하는 클라이언트를 실행하세요. 기존 계정 데이터를 보존하세요.
 
-[magicwar](https://github.com/YSL-RyuDo/magicwar)
+[Arcana Duel Client](https://github.com/YSL-RyuDo/ArcanaDuelClient)
 
 ## 관련 저장소
 
-[magicwarserver](https://github.com/YSL-RyuDo/magicwarserver-public), 공개 소스
+[Arcana Duel Server](https://github.com/YSL-RyuDo/ArcanaDuelServerPublic), 공개 소스
 
-[magicwar](https://github.com/YSL-RyuDo/magicwar), 공개 저장소
+[Arcana Duel Client](https://github.com/YSL-RyuDo/ArcanaDuelClient), 공개 저장소
